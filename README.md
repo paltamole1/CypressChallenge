@@ -8,11 +8,8 @@ The project follows a structured approach to maintainability and clarity:
 ```
 e-commerce-test-suite/
 ├── cypress/
-│   ├── e2e/             # Contains the end-to-end test files (.spec.js)
+│   ├── e2e/             # Contains the end-to-end test files (.cy.js)
 │   ├── fixtures/        # Stores static test data in JSON format
-│   ├── support/         # Includes custom commands and utility functions
-│   │   ├── commands.js
-│   │   └── e2e.js
 │   └── pageObjects/     # Holds the Page Object Model classes
 │       ├── CartPage.js
 │       ├── CheckoutPage.js
@@ -22,12 +19,6 @@ e-commerce-test-suite/
 ├── .github/
 │   └── workflows/
 │       └── cypress.yml      # GitHub Actions workflow for CI/CD
-├── node_modules/        # Project dependencies (ignored by Git)
-├── package.json         # Project metadata and dependencies
-├── package-lock.json    # Exact versions of project dependencies
-├── .gitignore           # Specifies intentionally untracked files that Git should ignore
-├── cypress.config.js    # Cypress configuration file
-└── README.md            # Project documentation (this file)
 ```
 
 ## Design Patterns
@@ -47,8 +38,6 @@ The following key test scenarios have been automated:
 * **Product Search:** Covers searching for products by name and by category, and verifying the displayed results, including handling cases with no search results.
 * **Adding Products to Cart:** Tests the ability to add single and multiple products to the shopping cart and verifies the cart contents.
 * **Checkout Process:** Automates the complete checkout process, including filling in shipping information and processing payment with valid details.
-
-## Retry and Parallel Testing Implementation
 
 ## Retry and Parallel Testing
 

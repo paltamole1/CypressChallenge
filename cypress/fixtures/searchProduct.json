@@ -1,0 +1,14 @@
+{
+    "searchByName": {
+      "searchTerm": "RGB Keyboard",
+      "expectedResult": "RGB Keyboard"
+    },
+    "noResultsSearch": {
+      "searchTerm": "Nonexistent Product",
+      "noResultsMessage": "No results found"
+    },
+    "searchByCategory": {
+      "category": "Electronics",
+      "expectedResult": "Latest Generation Electronics"
+    }
+  }

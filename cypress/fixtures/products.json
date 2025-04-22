@@ -1,0 +1,7 @@
+{
+    "productsToAdd": [
+      { "name": "Keyboard", "price": "10.00" },
+      { "name": "Mouse", "price": "20.00" },
+      { "name": "Headphones", "price": "30.00" }
+    ]
+  }

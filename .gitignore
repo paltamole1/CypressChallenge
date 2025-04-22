@@ -1,0 +1,31 @@
+# Node Modules
+node_modules/
+
+# Cypress Cache and Output
+cypress/cache/
+cypress/screenshots/
+cypress/videos/
+cypress/downloads/
+
+# Environment Variables (if you have a .env file)
+.env
+*.env.local
+*.env.development
+*.env.test
+*.env.production
+
+# Editor and IDE specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Logs or temporary files
+*.log
+tmp/
+temp/
+coverage/
+junit.xml
+mochawesome-report/
+cypress-report/

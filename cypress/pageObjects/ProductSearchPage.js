@@ -64,7 +64,7 @@ class ProductSearchPage {
     }
   
     getSearchResultsCount() {
-      return this.searchResults().its('length');
+      return this.searchResults.its('length');
     }
   
     getProductNameText(index) {
@@ -100,4 +100,4 @@ class ProductSearchPage {
     }
   }
   
-  export default new ProductSearchPage();
+  export default ProductSearchPage;

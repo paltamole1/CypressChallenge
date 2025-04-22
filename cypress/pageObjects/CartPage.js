@@ -38,7 +38,7 @@ class CartPage {
   
 
     getItemCount() {
-      return this.cartItems().its('length');
+      return this.cartItems.its('length');
     }
   
     getItemNameText(index) {
@@ -78,4 +78,4 @@ class CartPage {
     }
   }
   
-  export default new CartPage();
+  export default CartPage;

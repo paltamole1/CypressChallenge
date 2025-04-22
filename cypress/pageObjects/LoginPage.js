@@ -45,4 +45,4 @@ class LoginPage {
     }
   }
   
-  export default new LoginPage();
+  export default LoginPage;

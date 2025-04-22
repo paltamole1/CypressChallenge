@@ -7,7 +7,7 @@ describe('User Login', { retries: 2 }, () => {
   });
 
   it('Should allow logging in with valid credentials', () => {
-    cy.fixture('loginUsers').then((users) => {
+    cy.fixture('users').then((users) => {
       const validUser = users.validUser;
       cy.log('--- Attempting login with valid credentials ---');
       cy.log(`Email: ${validUser.email}`);
@@ -22,7 +22,7 @@ describe('User Login', { retries: 2 }, () => {
   });
 
   it('Should display an error message with invalid credentials', () => {
-    cy.fixture('loginUsers').then((users) => {
+    cy.fixture('users').then((users) => {
       const invalidUser = users.invalidUser;
       cy.log('--- Attempting login with invalid credentials ---');
       cy.log(`Email: ${invalidUser.email}`);
@@ -36,7 +36,7 @@ describe('User Login', { retries: 2 }, () => {
   });
 
   it('Should display an error message with invalid email format', () => {
-    cy.fixture('loginUsers').then((users) => {
+    cy.fixture('users').then((users) => {
       const invalidEmailFormatUser = users.invalidEmailFormatUser;
       cy.log('--- Attempting login with invalid email format ---');
       cy.log(`Email: ${invalidEmailFormatUser.email}`);

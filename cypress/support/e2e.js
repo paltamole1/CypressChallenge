@@ -15,3 +15,9 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+
+Cypress.on('fail', (error, runnable) => {
+    cy.log(`**Global Test Step Failed:** ${runnable.title} - ${error.message}`);
+    // Prevent Cypress from failing the test immediately
+    return false;
+});

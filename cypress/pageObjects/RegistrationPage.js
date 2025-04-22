@@ -60,4 +60,4 @@ class RegistrationPage {
     }
   }
   
-  export default RegistrationPage;
+  export default new RegistrationPage();

@@ -1,16 +1,16 @@
 {
     "validShippingInfo": {
-      "firstName": "Octavio",
-      "lastName": "Benitez",
-      "address": "Fake Street 123",
-      "city": "Dallas",
-      "state": "Texas",
-      "zipCode": "01000"
+        "firstName": "Octavio",
+        "lastName": "Benitez",
+        "address": "Fake Street 123",
+        "city": "Dallas",
+        "state": "Texas",
+        "zipCode": "01000"
     },
     "validPaymentInfo": {
-      "method": "credit_card",
-      "cardNumber": "1111222233334444",
-      "expiryDate": "12/25",
-      "cvv": "123"
+        "method": "credit_card",
+        "cardNumber": "1111222233334444",
+        "expiryDate": "12/25",
+        "cvv": "123"
     }
-  }
+}

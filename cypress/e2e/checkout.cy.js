@@ -8,7 +8,7 @@ const productSearchPage = new ProductSearchPage();
 
 describe('Checkout Process', { retries: 1 }, () => {
   beforeEach(() => {
-    
+    cy.log('--- Setup: Adding product to cart and navigating to checkout ---');
     productSearchPage.visit();
     productSearchPage.setSearchStrategy('name');
     productSearchPage.searchByName('Producto de prueba');
@@ -17,6 +17,7 @@ describe('Checkout Process', { retries: 1 }, () => {
     cartPage.visit();
     cartPage.getItemCount().should('be.greaterThan', 0);
     cartPage.clickCheckoutButton();
+    cy.log('--- Setup complete. Now on the Checkout page. ---');
   });
 
   it('Should allow completing checkout with valid shipping and payment information', () => {
@@ -24,6 +25,7 @@ describe('Checkout Process', { retries: 1 }, () => {
       const shippingInfo = checkoutData.validShippingInfo;
       const paymentInfo = checkoutData.validPaymentInfo;
 
+      cy.log('--- Filling out shipping information ---');
       checkoutPage.typeFirstName(shippingInfo.firstName);
       checkoutPage.typeLastName(shippingInfo.lastName);
       checkoutPage.typeAddress(shippingInfo.address);
@@ -31,16 +33,19 @@ describe('Checkout Process', { retries: 1 }, () => {
       checkoutPage.selectState(shippingInfo.state);
       checkoutPage.typeZipCode(shippingInfo.zipCode);
 
+      cy.log('--- Filling out payment information ---');
       checkoutPage.selectPaymentMethod(paymentInfo.method);
       checkoutPage.typeCardNumber(paymentInfo.cardNumber);
       checkoutPage.typeExpiryDate(paymentInfo.expiryDate);
       checkoutPage.typeCvv(paymentInfo.cvv);
 
       checkoutPage.clickPlaceOrderButton();
+      cy.log('--- "Place Order" button clicked. Verifying success... ---');
 
+      cy.log('--- Verifying order summary is visible ---');
       checkoutPage.verifySuccessMessageIsVisible();
       cy.url().should('include', '/order-confirmation');
-      cy.contains('Pedido realizado con éxito').should('be.visible'); 
+      cy.contains('Order Placed Successfully').should('be.visible'); 
     });
   });
 

@@ -1,24 +1,24 @@
 {
     "validUser": {
-      "firstName": "Octavio",
-      "lastName": "Benitez",
-      "email": "octavio.benitez@example.com",
-      "password": "SecurePass123!",
-      "confirmPassword": "SecurePass123!"
+        "firstName": "Octavio",
+        "lastName": "Benitez",
+        "email": "octavio.benitez@example.com",
+        "password": "SecurePass123!",
+        "confirmPassword": "SecurePass123!"
     },
     "mismatchedPasswordsUser": {
-      "firstName": "Jesus",
-      "lastName": "Medina",
-      "email": "jesus.medina@example.com",
-      "password": "Pass123",
-      "confirmPassword": "DifferentPass"
+        "firstName": "Jesus",
+        "lastName": "Medina",
+        "email": "jesus.medina@example.com",
+        "password": "Pass123",
+        "confirmPassword": "DifferentPass"
     },
     "emptyFieldsUser": {
-      "firstName": "",
-      "lastName": "",
-      "email": "",
-      "password": "",
-      "confirmPassword": ""
+        "firstName": "",
+        "lastName": "",
+        "email": "",
+        "password": "",
+        "confirmPassword": ""
     },
     "invalidUser": {
         "email": "jhon.doe@example.com",
@@ -30,4 +30,4 @@
         "password": "SecurePass123!",
         "errorMessage": "Invalid email format"
     }
-  }
+}

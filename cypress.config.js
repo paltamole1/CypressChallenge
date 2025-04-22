@@ -9,5 +9,6 @@ module.exports = defineConfig({
       runMode: 2, // Number of retries in `cypress run` (headless mode)
       openMode: 1, // Number of retries in `cypress open` (interactive mode)
     },
+    projectId: "ug3d2u",
   },
 });

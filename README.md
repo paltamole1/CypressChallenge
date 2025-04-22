@@ -6,7 +6,7 @@ This project contains an automated test suite for a fictional e-commerce web app
 
 The project follows a structured approach to maintainability and clarity:
 ```
-e-commerce-test-suite/
+CypressChallenge/
 ├── cypress/
 │   ├── e2e/             # Contains the end-to-end test files (.cy.js)
 │   ├── fixtures/        # Stores static test data in JSON format
